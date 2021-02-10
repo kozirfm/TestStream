@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Test Stream</string>
+    <string name="title">Заголовок:</string>
+    <string name="location">Локация:</string>
+    <string name="refresh">Обновить</string>
+    <string name="error">Сервис недоступен, попробуйте позже.</string>
 </resources>
