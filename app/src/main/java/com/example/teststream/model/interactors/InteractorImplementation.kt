@@ -34,7 +34,7 @@ class InteractorImplementation(private val remoteDataSource: RemoteDataSource) :
         val posts = mutableListOf<Post>()
         val locations = items.flatMap { it.data.map { data -> data.location } }
         val descriptions = items.flatMap { it.data.map { data -> data.description } }
-        val images = items.flatMap { it.links.map { link -> link.href } }
+        val images = items.flatMap { it.links.map { link -> link.image } }
         for (index in items.indices) {
             posts.add(
                 Post(

@@ -1,3 +1,5 @@
 package com.example.teststream.data
 
-data class Link(val href: String)
+import com.google.gson.annotations.SerializedName
+
+data class Link(@SerializedName("href") val image: String)

@@ -1,7 +1,7 @@
 package com.example.teststream.app.di
 
 import android.app.Application
-import com.example.teststream.view.MainActivity
+import com.example.teststream.view.activities.MainActivity
 import dagger.BindsInstance
 import dagger.Component
 import javax.inject.Singleton

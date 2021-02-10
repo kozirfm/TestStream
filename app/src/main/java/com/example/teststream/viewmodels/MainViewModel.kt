@@ -1,6 +1,5 @@
 package com.example.teststream.viewmodels
 
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.teststream.model.interactors.Interactor
@@ -19,7 +18,7 @@ class MainViewModel @Inject constructor(private val interactor: Interactor) : Vi
         getData()
     }
 
-    private fun getData(): LiveData<ViewState> {
+    fun getData() {
         viewState.postValue(Loading)
         val disposable = interactor.getPosts().subscribe({ result ->
             viewState.postValue(result)
@@ -27,7 +26,6 @@ class MainViewModel @Inject constructor(private val interactor: Interactor) : Vi
             viewState.postValue(Error(throwable))
         })
         compositeDisposable.add(disposable)
-        return viewState
     }
 
     override fun onCleared() {
